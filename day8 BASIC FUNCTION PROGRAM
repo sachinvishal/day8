@@ -1,0 +1,22 @@
+
+#include <stdio.h>
+
+int csa()
+
+{
+
+return 25*2;
+
+}
+
+int main()
+
+{
+
+int d=csa();
+
+printf("%d", csa());
+
+return 0;
+}
+OUTPUT :50
