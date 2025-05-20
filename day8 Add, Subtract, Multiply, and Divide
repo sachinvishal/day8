@@ -1,0 +1,55 @@
+#include <stdio.h>
+
+// Function Declarations (Function Prototypes)
+float add(float a, float b);
+float subtract(float a, float b);
+float multiply(float a, float b);
+float divide(float a, float b);
+
+int main() {
+    float num1, num2;
+    float sum, diff, product, quotient;
+
+    printf("Enter two floating-point numbers: ");
+    scanf("%f %f", &num1, &num2);
+
+    // Calling the functions
+    sum = add(num1, num2);
+    diff = subtract(num1, num2);
+    product = multiply(num1, num2);
+    quotient = divide(num1, num2);
+
+    // Printing the results
+    printf("Sum = %.2f\n", sum);
+    printf("Difference = %.2f\n", diff);
+    printf("Product = %.2f\n", product);
+    printf("Quotient = %.2f\n", quotient);
+
+    return 0;
+}
+
+// Function Definitions
+float add(float a, float b) {
+    return a + b;
+}
+
+float subtract(float a, float b) {
+    return a - b;
+}
+
+float multiply(float a, float b) {
+    return a * b;
+}
+
+float divide(float a, float b) {
+    if (b != 0)
+        return a / b;  // Return the division result
+    else
+        printf("Error! Division by zero.\n");
+        return 0; // Return 0 if division by zero occurs
+}
+Enter two floating-point numbers: 12.5 3.5
+Sum = 16.00
+Difference = 9.00
+Product = 43.75
+Quotient = 3.57
