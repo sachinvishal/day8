@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+void csa()
+{
+    printf("\ni am in csa fun");
+    it ();
+    printf("\ni am back to csa fun");
+   
+}
+void it()
+{
+    printf("\ni am in it fun");
+   
+}
+int main()
+{
+printf("i am in main fun");
+csa();
+printf("\ni am back to main fun");
+}
+
+output:i am in main fun
+i am in csa fun
+i am in it fun
+i am back to csa fun
+i am back to main fun
