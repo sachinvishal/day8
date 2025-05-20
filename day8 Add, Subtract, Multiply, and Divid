@@ -1,0 +1,56 @@
+#include <stdio.h>
+
+// Function Declarations (Function Prototypes)
+int add(int a, int b);
+int subtract(int a, int b);
+int multiply(int a, int b);
+float divide(int a, int b);
+
+int main() {
+    int num1, num2;
+    int sum, diff, product;
+    float quotient;
+
+    printf("Enter two numbers: ");
+    scanf("%d %d", &num1, &num2);
+
+    // Calling the functions
+    sum = add(num1, num2);
+    diff = subtract(num1, num2);
+    product = multiply(num1, num2);
+    quotient = divide(num1, num2);
+
+    // Printing the results
+    printf("Sum = %d\n", sum);
+    printf("Difference = %d\n", diff);
+    printf("Product = %d\n", product);
+    printf("Quotient = %.2f\n", quotient);
+
+    return 0;
+}
+
+// Function Definitions
+int add(int a, int b) {
+    return a + b;
+}
+
+int subtract(int a, int b) {
+    return a - b;
+}
+
+int multiply(int a, int b) {
+    return a * b;
+}
+
+float divide(int a, int b) {
+    if (b != 0)
+        return (float)a / b;  // Type casting to float for precise division
+    else
+        printf("Error! Division by zero.\n");
+        return 0; // Returning 0 for division by zero
+}
+Enter two numbers: 10 5
+Sum = 15
+Difference = 5
+Product = 50
+Quotient = 2.00
